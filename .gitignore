@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# macOS / Linux
+.DS_Store
+*.swp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Log files
+*.log
+
+# Cache folders
+.nse_cache/
+*.egg-info/
+.cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Config / local overrides
+.env
+*.local
+config/config_local.py
+
+# PDF downloads (if stored temporarily)
+pdfs/
+*.pdf
+
+# Output
+*.out
+*.tmp
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/

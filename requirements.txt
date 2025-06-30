@@ -1,0 +1,9 @@
+# HTTP requests
+requests>=2.31.0
+
+# PDF parsing
+PyMuPDF>=1.23.7  # `fitz` module
+
+# BSE announcements library
+bse>=3.0.1
+nse>=1.2.5
