@@ -14,15 +14,14 @@ def extract_bse_symbol(nsurl: str) -> Optional[str]:
     except Exception:
         return None
 
-def fetch_announcements() -> list[Announcement]:
-    today = datetime.today()
+def fetch_announcements(from_date: datetime, to_date: datetime) -> list[Announcement]:
     new_announcements = []
 
     with BSE(download_folder="./") as bse:
         data = bse.announcements(
             page_no=1,
-            from_date=today,
-            to_date=today,
+            from_date=from_date,
+            to_date=to_date,
             category='Company Update',
             subcategory='Award of Order / Receipt of Order'
         )

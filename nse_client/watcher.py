@@ -8,8 +8,7 @@ from utils.amount_parser import extract_single_order_value
 
 seen_nse_ids = set()
 
-def fetch_announcements() -> list[Announcement]:
-    today = datetime.today()
+def fetch_announcements(from_date: datetime, to_date: datetime) -> list[Announcement]:
     new_announcements = []
 
     target_descs = {
@@ -18,7 +17,7 @@ def fetch_announcements() -> list[Announcement]:
     }
 
     with NSE(download_folder="./nse_cache", server=False) as nse:
-        announcements = nse.announcements(from_date=today, to_date=today)
+        announcements = nse.announcements(from_date=from_date, to_date=to_date)
 
     for item in announcements:
         if item.get("desc") not in target_descs:
